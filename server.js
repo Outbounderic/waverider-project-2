@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 //  How it connects to the database with Heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/' + 'TEMP-CHANGE-THIS';
 //  Connection to Mongo
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 //  Error handlers
 db.on('error', (err) => console.log(err.message + ' is Mongodb not running?'));
 db.on('connected', () => console.log('mongo connected: ', MONGODB_URI));
