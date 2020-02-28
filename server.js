@@ -40,7 +40,7 @@ db.on('open', () => {});
 //  use public folder for static assets
 app.use(express.static('public'));
 //  populates req.body with parsed info from forms
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 //  use method override
 app.use(methodOverride('_method'));
