@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index</title>
+  </head>
+  <body>
+    <nav>
+      <a href="/listings/new">Create a new Listing</a>
+    </nav>
+    <h1>Main Index page</h1>
+    <ul>
+      <% for (let i = 0; i < listings.length; i++) { %>
+      <li>
+        <a href="/listings/<%=listings[i].id%>"><%=listings[i].title%></a>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>
