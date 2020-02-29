@@ -13,6 +13,13 @@ listingRoute.get('/new', (req, res) => {
 });
 
 //  Edit
+listingRoute.get('/:id/edit', (req, res) => {
+  Listing.findById(req.params.id, (err, foundListing) => {
+    res.render('listings/edit.ejs', {
+      listing: foundListing
+    });
+  });
+});
 
 //  Delete
 listingRoute.delete('/:id', (req, res) => {
@@ -55,7 +62,13 @@ listingRoute.get('/:id', (req, res) => {
     });
   });
 });
+
 //  Update
+listingRoute.put('/:id', (req, res) => {
+  Listing.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedListing) => {
+    res.redirect('/')
+  })
+});
 
 //  Create - This is for the shop listing
 listingRoute.post('/', (req, res) => {
