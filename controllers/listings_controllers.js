@@ -15,6 +15,37 @@ listingRoute.get('/new', (req, res) => {
 //  Edit
 
 //  Delete
+listingRoute.delete('/:id', (req, res) => {
+  Listing.findByIdAndRemove(req.params.id, (err, deletedListing) => {
+    res.redirect('/');
+  });
+});
+
+//  Seed
+listingRoute.get('/seed', (req, res) => {
+  Listing.create([
+    {
+      'title': 'Distant Dismay',
+      'price': 300,
+      'image': 'https://stat.ameba.jp/user_images/20181007/13/yoshi01234/ef/45/j/o1080108014279605694.jpg?caw=800',
+      'description': 'The inspiration for this one came from a younger photo of my darling Grandma from her youth.'
+    },
+    {
+      'title': 'French Punk',
+      'price': 250,
+      'image': 'https://stat.ameba.jp/user_images/20180829/19/yoshi01234/bf/59/j/o1080135014256730137.jpg?caw=800',
+      'description': 'Inspired by the french actress Léa Seydoux with a punk twist.'
+    },
+    {
+      'title': 'Mushin Wave',
+      'price': 700,
+      'image': 'https://stat.ameba.jp/user_images/20180316/21/yoshi01234/3b/67/j/o0640080014150857376.jpg?caw=800',
+      'description': 'Inspired by the Edo period samurai and the ceremonial kendoka.'
+    }
+  ], (err, data) => {
+    res.redirect('/');
+  });
+});
 
 //  Show
 listingRoute.get('/:id', (req, res) => {
