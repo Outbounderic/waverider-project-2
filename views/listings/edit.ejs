@@ -4,7 +4,7 @@
     <%- include ('../partials/head.ejs')%>
   </head>
   <body>
-    <%- include ('../partials/head.ejs') %>
+    <%- include ('../partials/header.ejs') %>
     <h1>Edit</h1>
     <form action="/listings/<%=listing.id%>?_method=PUT" method="POST">
       Title: <br><input type="text" name="title" value="<%=listing.title%>"><br>
