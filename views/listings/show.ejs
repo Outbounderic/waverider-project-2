@@ -5,11 +5,18 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %>
-    <h1>Listing Show Page</h1>
-    <h2><%=listing.title%></h2>
-    <img src="<%=listing.image%>" alt="">
-    <p><%=listing.description%></p>
-    <p><%listing.price%></p>
-    <a href="/">Back to main</a>
+    <div class="columns">
+      <div class="column">
+        <figure class="image is-1by1">
+          <img src="<%=listing.image%>" alt="">
+        </figure>
+      </div>
+      <div class="column">
+        <h1 class="title is-1"><%=listing.title%> | Price $<%=listing.price%>.00</h1>
+        <p class="subtitle"><%=listing.description%></p>
+        <button class="button is-primary" type="button" name="button">Purchase</button>
+        <button class="button is-primary is-outlined" type="button" name="button"><a href="/">Back to main</a></button>
+      </div>
+    </div>
   </body>
 </html>

@@ -5,13 +5,18 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %>
-    <h1>Edit</h1>
-    <form action="/listings/<%=listing.id%>?_method=PUT" method="POST">
-      Title: <br><input type="text" name="title" value="<%=listing.title%>"><br>
-      Price: <br><input type="number" name="price" value="<%=listing.price%>"><br>
-      Image Url: <br><input type="text" name="image" value="<%=listing.image%>"><br>
-      Listing Description: <br><textarea name="description" rows="8" cols="80"><%=listing.description%></textarea><br>
-      <input type="submit" value="Submit Changes">
-    </form>
+    <div class="container has-text-left">
+      <form class="control" action="/listings/<%=listing.id%>?_method=PUT" method="POST">
+        <label class="label" for="title">Title:</label>
+        <input class="input" type="text" name="title" value="<%=listing.title%>"><br>
+        <label class="label" for="price">Price:</label>
+        <input class="input" type="number" name="price" value="<%=listing.price%>"><br>
+        <label class="label" for="image">Image Url:</label>
+        <input class="input" type="text" name="image" value="<%=listing.image%>"><br>
+        <label class="label" for="description">Listing Description:</label>
+        <textarea class="textarea" name="description" rows="8" cols="80"><%=listing.description%></textarea><br>
+        <button class="button is-primary" type="submit" name="button">Submit Changes</button>
+      </form>
+    </div>
   </body>
 </html>
