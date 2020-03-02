@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <%- include ('../partials/head.ejs')%>
+    <%- include ('../partials/head.ejs') %>
   </head>
   <body>
-    <nav>
-      <a href="/listings/new">Create a new Listing</a>
-    </nav>
+    <%- include ('../partials/header.ejs') %>
+    <a href="/listings/new">Create a new Listing</a>
     <h1>Main Index page</h1>
     <ul>
       <% for (let i = 0; i < listings.length; i++) { %>
