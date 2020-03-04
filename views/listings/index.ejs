@@ -15,9 +15,9 @@
               </figure>
             </div>
             <div class="column">
-              <h1 class="title is-1">Store Name</h1>
-              <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <button class="button is-primary" type="button" name="button">Find Out More</button>
+              <h1 class="title is-1">Studio Sketch7</h1>
+              <p class="subtitle">Studio Sketch7 is your local art gallery and workshop perfect for many creative enthusiasts. Enjoy multipaced classes focused on using foundational skills in real works or take a tour through our gallery and see what your neighbors are making.</p>
+              <button class="button is-primary" type="button" name="button">Classes</button>
               <button class="button is-primary is-outlined" type="button" name="button">Contact Us</button>
             </div>
           </div>
@@ -27,8 +27,12 @@
     <section class="section">
       <div class="container">
         <div class="notification is-info">
-          <h2 class="title">Upcoming Event</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#">Click here for more info!</a></p>
+          <h2 class="title">Upcoming Events</h2>
+          <ul>
+            <li>Monday - Pottery and Glassblowing Demo</li>
+            <li>Tuesday - Classical Oil Painting</li>
+            <li>Wednesday - Kid's Crafts and Guest Speaker</li>
+          </ul>
         </div>
         <div class="columns">
           <div class="column">
@@ -39,7 +43,7 @@
                 </figure>
               </div>
               <div class="column content">
-                <h2 class="title">What</h2>
+                <h2 class="title">Our Mission</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <button class="button is-primary"type="button" name="button">Read More</button>
               </div>
@@ -53,7 +57,7 @@
                 </figure>
               </div>
               <div class="column content">
-                <h2 class="title">Who</h2>
+                <h2 class="title">Who Can Show</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <button class="button is-primary"type="button" name="button">Read More</button>
               </div>
@@ -87,50 +91,8 @@
         </div>
       </div>
     </section>
-    <footer class="footer">
-      <div class="container">
-        <div class="columns is-mobile is-multiline">
-          <div class="column is-half-mobile is-one-quarter-desktop">
-            <h6 class="title is-5">Links</h6>
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">Services</a></li>
-              <li><a href="/">About</a></li>
-              <li><a href="/">Team</a></li>
-              <li><a href="/">Contact</a></li>
-            </ul>
-          </div>
-          <div class="column is-half-mobile is-one-quarter-desktop">
-            <h6 class="title is-5">Information</h6>
-            <ul>
-              <li><a href="/">Legal Information</a></li>
-              <li><a href="/">Job Opportunitiues</a></li>
-              <li><a href="/">FAQ</a></li>
-            </ul>
-          </div>
-          <div class="column is-half-mobile is-one-quarter-desktop">
-            <h6 class="title is-5">Follow Us</h6>
-            <ul>
-              <li><a href="#"><i class="fab fa-fw fa-facebook"></i>Facebook</a></li>
-              <li><a href="#"><i class="fab fa-fw fa-instagram"></i>Instagram</a></li>
-              <li><a href="#"><i class="fab fa-fw fa-twitter"></i>Twitter</a></li>
-              <li><a href="#"><i class="fab fa-fw fa-youtube"></i>YoutTube</a></li>
-              <li><a href="#"><i class="fab fa-fw fa-linkedin"></i>LinkedIn</a></li>
-            </ul>
-          </div>
-          <div class="column is-half-mobile is-one-quarter-desktop">
-            <h6 class="title is-5">Our Location</h6>
-              <address>
-                <strong>Company Name</strong><br />
-                Street Name<br />
-                Zip Code and City<br />
-                <i class="fas fa-fw fa-phone"></i><a href="tel:1234567890">(123) 456-7890</a>
-                <i class="fas fa-fw fa-envelope"></i><a href="mailto:infor@domain">info@domain.com</a>
-              </address>
-          </div>
-        </div>
-        <p class="has-text-centered">&copy: 2020 Company Name. All rights reserved.</p>
-      </div>
+    <footer>
+      <%- include ('../partials/footer.ejs') %>
     </footer>
   </body>
 </html>

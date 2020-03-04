@@ -51,6 +51,8 @@ app.use(methodOverride('_method'));
 //  Controllers
 const listingsController = require('./controllers/listings_controllers.js');
 app.use('/listings', listingsController)
+const servicesController = require('./controllers/services_controllers.js');
+app.use('/services', servicesController)
 
 /*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   ROUTES
