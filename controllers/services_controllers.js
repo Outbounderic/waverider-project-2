@@ -13,7 +13,13 @@ servicesRoute.get('/new', (req, res) => {
 });
 
 //  Edit
-
+servicesRoute.get('/:id/edit', (req, res) => {
+  Service.findById(req.params.id, (err, foundService) => {
+    res.render('services/edit.ejs', {
+      service: foundService
+    })
+  })
+})
 
 //  Delete
 servicesRoute.delete('/:id', (req, res) => {
@@ -35,7 +41,11 @@ servicesRoute.get('/:id', (req, res) => {
 })
 
 //  Update
-
+servicesRoute.put('/:id', (req, res) => {
+  Service.findByIdAndUpdate(req.params.id, req.body, () => {
+    res.redirect('/services')
+  })
+})
 
 //  Create
 servicesRoute.post('/', (req, res) => {

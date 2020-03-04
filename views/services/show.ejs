@@ -17,12 +17,12 @@
           <p class="subtitle">Spots Available: <%=service.spots%><br /><%=service.description%></p>
           <button class="button is-primary" type="button" name="button">Sign Up</button>
         </div>
-        <form action="/services/<%=service._id%>/edit" method="POST">
-          <input class="button is-primary is-outlined" type="submit" name="" value="Edit Class">
-        </form>
-        <form action="/services/<%=service._id%>?_method=DELETE" method="POST">
-          <input class="button is-danger is-outlined" type="submit" value="Delete Class"/>
-        </form>
+        <div class="column">
+          <button class="button is-primary is-outlined" type="button" name="button"><a href="/services/<%=service._id%>/edit">Edit</a></button>
+          <form action="/services/<%=service._id%>?_method=DELETE" method="POST">
+            <input class="button is-danger is-outlined" type="submit" value="Delete Class"/>
+          </form>
+        </div>
       </div>
       <button class="button is-primary is-outlined" type="button" name="button"><a href="/services">Back to services</a></button>
     </div>
