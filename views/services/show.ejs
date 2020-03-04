@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../partials/head.ejs') %>
+  </head>
+  <body>
+    <%- include ('../partials/header.ejs') %>
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <figure class="image is-1by1">
+            <img src="<%= service.image %>" alt="">
+          </figure>
+        </div>
+        <div class="column">
+          <h1 class="title is-1"><%=service.title%> | Price $<%=service.cost%>.00</h1>
+          <p class="subtitle">Spots Available: <%=service.spots%><br /><%=service.description%></p>
+          <button class="button is-primary" type="button" name="button">Sign Up</button>
+        </div>
+        <form action="/services/<%=service._id%>/edit" method="POST">
+          <input class="button is-primary is-outlined" type="submit" name="" value="Edit Class">
+        </form>
+        <form action="/services/<%=service._id%>?_method=DELETE" method="POST">
+          <input class="button is-danger is-outlined" type="submit" value="Delete Class"/>
+        </form>
+      </div>
+      <button class="button is-primary is-outlined" type="button" name="button"><a href="/services">Back to services</a></button>
+    </div>
+    <footer class="footer">
+      <%- include ('../partials/footer.ejs') %>
+    </footer>
+  </body>
+</html>

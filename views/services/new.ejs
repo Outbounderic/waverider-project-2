@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('../partials/head.ejs')%>
+  </head>
+  <body>
+    <%- include ('../partials/header.ejs') %>
+    <div class="container has-text-left">
+      <form class="control" action="/services" method="POST">
+        <label class="label" for="title">Title:</label>
+        <input class="input" type="text" name="title"><br>
+        <label class="label" for="spots">Open Spots:</label>
+        <input class="input" type="number" name="spots"><br>
+        <label class="label" for="image">Image Url:</label>
+        <input class="input" type="text" name="image"><br>
+        <label class="label" for="cost">Price:</label>
+        <input class="input" type="text" name="cost"><br>
+        <label class="label" for="description">Service Description:</label>
+        <textarea class="textarea" name="description" rows="8" cols="80"></textarea><br>
+        <button class="button is-primary" type="submit" name="button">Create Service</button>
+        <button class="button is-primary is-outlined" type="button" name="button"><a href="/services">Back to Services</a></button>
+      </form>
+    </div>
+    <footer class="footer">
+      <%- include ('../partials/footer.ejs') %>
+    </footer>
+  </body>
+</html>

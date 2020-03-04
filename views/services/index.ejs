@@ -5,8 +5,29 @@
   </head>
   <body>
     <%- include ('../partials/header.ejs') %>
-    
-    <footer>
+    <section class="section">
+      <div class="container">
+        <h2 class="title is-1 has-text-centered">A list of our services</h2>
+        <div class="columns">
+          <% for (let i = 0; i < services.length; i++) { %>
+          <div class="column">
+            <figure class="image is-4by3">
+              <img src="<%=services[i].image%>" alt="">
+            </figure>
+          </div>
+          <div class="column content">
+            <h3 class="title has-text-left"><%=services[i].title%></h3>
+            <p><%=services[i].description%></p>
+            <button class="button is-primary is-outlined is-centered" type="button" name="button"><a href="/services/<%=services[i].id%>">Read More</a></button>
+          </div>
+          <% } %>
+          <div class="column">
+            <button class="button is-primary is-outlined is-centered" type="button" name="button"><a href="/services/new">Create a new Service</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
       <%- include ('../partials/footer.ejs') %>
     </footer>
   </body>
