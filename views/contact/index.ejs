@@ -2,6 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <%- include ('../partials/head.ejs') %>
+    <style type="text/css">
+      select,
+      .select {
+        width: 100%;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
     <%- include ('../partials/header.ejs') %>
@@ -17,8 +33,94 @@
               12345, Dallas<br>
               <i class="fas fa-fw fa-phone"></i> <a href="tel:+1234567890">
               (123) 456-7890</a><br>
-              <i class="fas fa-fw fa-envelope"></i> <a href="mailto:info@domain.com"></a>
+              <i class="fas fa-fw fa-envelope"></i> <a href="mailto:info@domain.com">info@domain.com</a>
             </address>
+          </div>
+          <div class="column">
+            <h4 class="title">Hours:</h4>
+            <p>
+              Monday-Friday: 9 am - 9 pm <br>
+              Saturday: 7 am - 11 pm <br>
+              Sunday: 1 pm - 8 pm <br>
+            </p>
+          </div>
+        </div>
+        <div class="columns is-tablet">
+          <div class="column">
+            <h4 class="title">Questions?</h4>
+            <form class="" action="index.html" method="post">
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label" for="name">Name:</label>
+                    <div class="control has-icons-left">
+                      <input type="text" id="name" class="input" placeholder="Name">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-user"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field">
+                    <label class="label" for="email">Email:</label>
+                    <div class="control has-icons-left">
+                      <input type="email" id="email" class="input" placeholder="example@email.com">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-envelope"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label" for="telephone">Telephone:</label>
+                    <div class="control has-icons-left">
+                      <input type="tel" id="telephone" class="input" placeholder="1234567890">
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-phone"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field">
+                    <label class="label" for="select">Department:</label>
+                    <div class="control has-icons-left">
+                      <div class="select">
+                        <select id="select">
+                          <option value=""> select here </option>
+                          <option value="business">Business</option>
+                          <option value="business">Sale</option>
+                          <option value="business">Support</option>
+                        </select>
+                      </div>
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-home"></i>
+                      </span>
+                    </div>
+                    <small class="form-text">Please select the department your looking for.</small>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label" for="textarea">Message:</label>
+                <div class="control">
+                  <textarea id="textarea" class="textarea" rows="5" placeholder="Write here!">
+                  </textarea>
+                </div>
+              </div>
+              <button class="button is-primary" type="submit" name="button">Submit</button>
+              <button class="button" type="button" name="button">Reset</button>
+            </form>
+          </div>
+          <div class="column">
+            <h4 class="title">Location:</h4>
+            <figure class="image is-4by3">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3354.473327148857!2d-96.80425276811012!3d32.779706767464845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e9918306f6349%3A0x615f7a7b2642cf5c!2sBelo%20Garden!5e0!3m2!1sen!2sus!4v1583375345643!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </figure>
           </div>
         </div>
       </div>

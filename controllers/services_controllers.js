@@ -29,7 +29,33 @@ servicesRoute.delete('/:id', (req, res) => {
 })
 
 //  Seed
-
+servicesRoute.get('/seed', (req, res) => {
+  Listing.create([
+    {
+      'title': 'Clay Spinning',
+      'spots': 12,
+      'image': 'https://stat.ameba.jp/user_images/20181007/13/yoshi01234/ef/45/j/o1080108014279605694.jpg?caw=800',
+      'description': 'A Clay spinning class.',
+      'cost': 25
+    },
+    {
+      'title': 'Glass Blowing',
+      'spots': 3,
+      'image': 'https://stat.ameba.jp/user_images/20181007/13/yoshi01234/ef/45/j/o1080108014279605694.jpg?caw=800',
+      'description': 'A Clay spinning class.',
+      'cost': 50
+    },
+    {
+      'title': 'Painting Class',
+      'spots': 8,
+      'image': 'https://stat.ameba.jp/user_images/20181007/13/yoshi01234/ef/45/j/o1080108014279605694.jpg?caw=800',
+      'description': 'A Clay spinning class.',
+      'cost': 15
+    }
+  ], (err, data) => {
+    res.redirect('/');
+  });
+});
 
 //  Show
 servicesRoute.get('/:id', (req, res) => {
