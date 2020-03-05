@@ -29,8 +29,8 @@ servicesRoute.delete('/:id', (req, res) => {
 })
 
 //  Seed
-servicesRoute.get('/seed', (req, res) => {
-  Listing.create([
+servicesRoute.get('/services/seed', (req, res) => {
+  Service.create([
     {
       'title': 'Clay Spinning',
       'spots': 12,
